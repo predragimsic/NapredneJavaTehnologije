@@ -1,4 +1,8 @@
 import { Component } from '@angular/core';
+import { MenuController } from '@ionic/angular';
+import { ThemeService } from '../services/theme.service';
+import { Router } from '@angular/router';
+import { MoviesPage } from '../movies/movies.page';
 
 @Component({
   selector: 'app-home',
@@ -7,6 +11,9 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
+  darkMode = false;
+
+  constructor(private menuCtrl: MenuController) {
+  }
 
 }

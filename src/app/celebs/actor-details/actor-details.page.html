@@ -1,0 +1,68 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/celebs">
+      </ion-back-button>
+    </ion-buttons>
+
+    <ion-buttons slot="end">
+      <ion-fab-button size="small" color="tertiary" (click)="onEditActor()">
+        <ion-icon name="pencil"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button size="small" color="tertiary" (click)="onDeleteActor()">
+        <ion-icon name="trash"></ion-icon>
+      </ion-fab-button>
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div class="ion-text-center" *ngIf="isLoading">
+    <ion-spinner color="primary"></ion-spinner>
+  </div>
+
+  <ion-card *ngIf="!isLoading">
+    <ion-img [src]="actor.image"></ion-img>
+    <ion-card-header>
+      <ion-card-title>
+        <h1>{{actor.name}}</h1>
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-grid class="myGrid">
+        <ion-row>
+          <ion-label class="myLabel">A.K.A.: </ion-label> {{actor.aka}}
+        </ion-row>
+        <ion-row>
+          <ion-label class="myLabel">Biography: </ion-label> {{actor.biography}}
+        </ion-row>
+        <ion-row>
+          <ion-label class="myLabel">Date of birth: </ion-label> {{birthday}}
+        </ion-row>
+        <ion-row>
+          <ion-label class="myLabel">Country: </ion-label> {{actor.country}}
+        </ion-row>
+        <ion-row>
+          <ion-label class="myLabel">Height: </ion-label> {{actor.height}}
+        </ion-row>
+        <ion-row>
+          <ion-label class="myLabel">Roles: </ion-label>
+          <ion-card *ngFor="let role of actor.roles">
+            <ion-img [src]="role.image"></ion-img>
+            <ion-card-header>
+              <ion-card-title>
+                <h1>{{role.name}}</h1>
+                <h2>{{role.content.name}}</h2>
+              </ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+            </ion-card-content>
+          </ion-card>
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

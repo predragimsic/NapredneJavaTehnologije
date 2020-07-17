@@ -1,20 +1,89 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+
+    <ion-img style="height: 50px;" src="../../assets/icon/header.jpg"></ion-img>
+
+
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content class="background">
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <h1>News</h1>
+  <ion-slides > 
+    <ion-slide>
+      <div class="slide">
+        <img src="https://i1.wp.com/thefutureoftheforce.com/wp-content/uploads/2019/12/No-Time-To-Die-trailer.jpg?fit=1400%2C700&ssl=1"/>
+        <h2>No Time To Die</h2>
+        <p>Movie <b>No Time To Die</b>  will be postponed until November, the James Bond sequel’s backers announced on Wednesday.</p>
+      </div>
+    </ion-slide>
+
+    <ion-slide>
+      <div class="slide">
+        <img src="https://autorepublika.com/wp-content/uploads/2019/06/Fast-and-Furious-9-fake-logo.jpg"/>
+        <h2>Fast and Furious 9</h2>
+        <p>The creators have delayed the release date because of the crown infection pandemic and it is set to be released on 31 March 2021.</p>
+      </div>
+    </ion-slide>
+
+    <ion-slide>
+      <img src="https://thebuzzpaper.com/wp-content/uploads/2020/05/Peaky-Blinders-Season-6-The-Buzz-Paper-3-1280x720.jpg"/>
+      <h2>Peaky Blinders Season 6</h2>
+      <p>Director Anthony Byrne explained: "We were so close to the start of filming season six. Months of hard work by our very talented, dedicated and hardworking crew."Sets were built, costumes were made. Cameras and lenses tested. Locations were booked. All the prep was done. It's a real shame not to be able to make it for you at this time."</p>
+    </ion-slide>
+
+    <ion-slide>
+      <img src="https://autofreak.com/wp-content/uploads/2020/06/Greys-Anatomy-season-17.jpg"/>
+      <h2>Grey's Anatomy</h2>
+      <p>Grey's Anatomy is returning for an astonishing 17th season, and there's some pretty solid evidence that it'll be the final season ever.
+        Ee'd expect season 17 to have either 24 or 25 episodes if it sticks to previous patterns.
+      </p>
+    </ion-slide>
+
+  </ion-slides>
+
+
+
+  <ion-footer>
+    <h1>Follow CineMan</h1>
+    <ion-row class="rowFooter">
+      <ion-col size="2" class="first">
+        <ion-item href="https://www.instagram.com/">
+          <ion-icon large name="logo-instagram"></ion-icon>
+        </ion-item>
+      </ion-col>
+      <ion-col size="2">
+        <ion-item href="https://www.facebook.com/">
+          <ion-icon name="logo-facebook"></ion-icon>
+        </ion-item>
+      </ion-col>
+      <ion-col size="2">
+        <ion-item href="https://www.twitch.com/">
+          <ion-icon name="logo-twitch"></ion-icon>
+        </ion-item>
+      </ion-col>
+      <ion-col size="2">
+        <ion-item href="https://www.twitter.com/">
+          <ion-icon name="logo-twitter"></ion-icon>
+        </ion-item>
+      </ion-col>
+      <ion-col size="2" class="last">
+        <ion-item href="https://www.youtube.com/">
+          <ion-icon name="logo-youtube"></ion-icon>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+
+
+
+
+
+  </ion-footer>
+
 </ion-content>

@@ -1,5 +1,7 @@
 {
-  "name": "Movies",
-  "integrations": {},
+  "name": "Cineman",
+  "integrations": {
+    "capacitor": {}
+  },
   "type": "angular"
 }

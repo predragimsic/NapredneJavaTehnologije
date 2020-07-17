@@ -1,0 +1,34 @@
+<ion-content class="content">
+        <h1 class="genre">Most popular genres</h1>
+                <h2>{{first}}</h2>
+                <ion-slides>
+                    <ion-slide *ngFor="let m of movies | genrePipe : first">
+                        <div [routerLink]="['/','movies', m.id]" class="slide">
+                            <img [src]="m.image" style="height: 250px;width: 375px;"/>
+                            <h3>{{m.name}}</h3>
+                            <p>{{m.description}}</p>
+                        </div>
+                    </ion-slide>
+                </ion-slides>
+                <h2>{{second}}</h2>
+                <ion-slides>
+                    <ion-slide *ngFor="let m of movies | genrePipe : second">
+                        <div [routerLink]="['/','movies', m.id]" class="slide">
+                            <img [src]="m.image" style="height: 250px;width: 375px;"/>
+                            <h3>{{m.name}}</h3>
+                            <p>{{m.description}}</p>
+                        </div>
+                    </ion-slide>
+                </ion-slides>
+                <h2>{{third}}</h2>
+                <ion-slides>
+                    <ion-slide *ngFor="let m of movies | genrePipe : third">
+                        <div [routerLink]="['/','movies', m.id]" class="slide">
+                            <img [src]="m.image" style="height: 250px;width: 375px;" />
+                            <h3>{{m.name}}</h3>
+                            <p>{{m.description}}</p>
+                        </div>
+                    </ion-slide>
+                </ion-slides>
+
+</ion-content>

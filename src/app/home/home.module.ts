@@ -6,6 +6,9 @@ import { HomePage } from './home.page';
 
 import { HomePageRoutingModule } from './home-routing.module';
 
+import {SuperTabsModule} from '@ionic-super-tabs/angular';
+import { MoviesPageModule } from '../movies/movies.module';
+
 
 @NgModule({
   imports: [

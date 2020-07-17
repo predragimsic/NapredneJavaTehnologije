@@ -1,0 +1,18 @@
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col col-6 *ngFor="let actor of actors">
+        <ion-card [routerLink] = "['/','celebs',actor.id]">
+          <ion-img [src]="actor.image"></ion-img>
+          <ion-card-header>
+            <ion-card-title>
+              <h1>{{actor.name}}</h1>
+            </ion-card-title>
+          </ion-card-header>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+ 
+
+</ion-content>

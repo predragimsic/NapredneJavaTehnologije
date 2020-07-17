@@ -1,0 +1,31 @@
+.genre{
+    background-color: #6a097d;
+    text-align: center;
+}
+
+h2{
+    background-color: #9f14bb;
+}
+
+.swiper-slide {
+    display: block;
+  }
+  
+.swiper-slide h2 {
+    margin-top: 2.8rem;
+  }
+  
+.swiper-slide img {
+    max-height: 100%;
+    max-width: 80%;
+    pointer-events: none;
+  }
+
+ion-slides{
+    height: min-content;
+  }
+  
+.rowFooter{
+    background-color: black;
+    
+  }

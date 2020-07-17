@@ -1,0 +1,68 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/movies">
+      </ion-back-button>
+    </ion-buttons>
+
+    <ion-buttons slot="end">
+      <ion-fab-button size="small" color="tertiary" (click)="onEditMovie()">
+        <ion-icon name="pencil"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button size="small" color="tertiary" (click)="onDeleteMovie()">
+        <ion-icon name="trash"></ion-icon>
+      </ion-fab-button>
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div class="ion-text-center" *ngIf="isLoading">
+    <ion-spinner color="primary"></ion-spinner>
+  </div>
+
+  <ion-card *ngIf="!isLoading">
+    <ion-img [src]="movie.image"></ion-img>
+    <ion-card-header>
+      <ion-card-title>
+        <h1>{{movie.name}}</h1>
+        <ion-label class="myLabel">Average grade: </ion-label> {{average}}
+        <ion-rating [(ngModel)]="rate" (rateChange)="onRatePressed($event)"></ion-rating>
+        <ion-button type="submit" color="primary" expand="block" (click)="onRateSubmit()" [disabled]="submitted || !pressedRate">
+          Rate
+        </ion-button>
+        <ion-button type="submit" color="primary" expand="block" (click)="onRateRemove()" [disabled]="!submitted">
+          Remove rate
+        </ion-button>
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-grid class="myGrid">
+        <ion-row>
+          <ion-label class="myLabel">Producer: </ion-label> {{movie.producer}}
+        </ion-row>
+        <ion-row>
+          <ion-label class="myLabel">Description: </ion-label> {{movie.description}}
+        </ion-row>
+        <ion-row>
+          <ion-label class="myLabel">Genre: </ion-label> {{movie.genre.name}}
+        </ion-row>
+        <ion-row>
+          <ion-label class="myLabel">Country: </ion-label> {{movie.country}}
+        </ion-row>
+        <ion-row>
+          <ion-label class="myLabel">Year: </ion-label> {{movie.year}}
+        </ion-row>
+        <ion-row>
+          <ion-label class="myLabel">Duration: </ion-label> {{movie.duration}}
+        </ion-row>
+        <ion-row>
+          <ion-label class="myLabel">Budget: </ion-label> {{movie.budget}}
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>
